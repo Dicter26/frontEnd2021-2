@@ -1,0 +1,15 @@
+footer{
+    padding: 20px;/**margen**/
+    color: #f5f5f5; /**color de las letras**/
+    font-size: 12px; /**tamaño de la letra**/
+}
+
+a{/**referenciamos a todas las etiquetas a dentro del html **/
+    color: #f08080;
+    text-decoration: none;/**quitamos el hipervinculo**/
+}
+
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
