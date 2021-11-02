@@ -1,0 +1,41 @@
+<div class="container-fluid"><!--clase container fluid es lo mas basico para boostrap-->
+
+        <div class="card-header">
+          <h1><i class="far fa-money-bill-alt"></i>&nbsp; Exchange Rate</h1>
+        </div>
+
+        <div class="card-body">
+            <h4> Base: {{ exchange_rate.base }}</h4> <!--las dobles llaves hacen referencia a las variables de nuestros componentes ts-->
+            <form [formGroup]="formulario" (ngSubmit)="ngSubmit()"><!--especificamos el formgroup al que pertenece y que funcion va a llamar cuando enviemos el formulario-->
+                <div class="form-group">
+                  <label for="rate">Tasa de Cambio</label>
+                  <input type="text" class="form-control marginForm" id="rate" formControlName="rate" placeholder="Tasa de cambio. . . "><!--referencia al formulario-->
+                </div>
+                <button type="submit" class="btn btn-primary marginForm">Consultar</button>
+              </form>
+              <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="text-center">Rate</th>
+                        <th class="text-center">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor= "let rate of exchange_rate.rates | keyvalue"><!--directiva para recorrer todo el json y mostrarlo en la tabla-->
+                        <td class="text-center">{{ rate.key }}</td>
+                        <td class="text-center">{{ rate.value }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+        </div>
+
+        <div class="card-footer text-muted">
+            <p>Provider: {{ exchange_rate.provider }}</p>
+            <p>WARNING_UPGRADED_TO_V6: {{ exchange_rate.WARNING_UPGRADED_TO_V6 }}</p>
+            <p>Terms: {{ exchange_rate.terms }}</p>
+            <p>Date: {{ exchange_rate.date }}</p>
+            <p>time_last_updated: {{ exchange_rate.time_last_updated }}</p>
+        </div>
+</div>
