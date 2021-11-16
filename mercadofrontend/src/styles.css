@@ -11109,3 +11109,12 @@ por lo cual no es necesario estar pegando este mismo estilo en todos las vistas 
    font-size: 8px;
    line-height: 8px;
  }
+
+ .marginForm{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+ .btn-block{
+   width: 100%;
+ }

@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';//importamos el modulo d
 
 import { LayoutModule } from './modules/layout/layout.module';//debemos importar tambien los componentes desde layout module
 import { ExchangeRateModule } from './modules/exchange-rate/exchange-rate.module'; //
+import { CustomerModule } from './modules/customer/customer.module';
+import { HomeModule } from './modules/home/home.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ExchangeRateModule } from './modules/exchange-rate/exchange-rate.module
     AppRoutingModule,
     HttpClientModule,
     LayoutModule,
-    ExchangeRateModule 
+    ExchangeRateModule,
+    CustomerModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
